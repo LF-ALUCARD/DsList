@@ -27,13 +27,17 @@ public class Game implements Serializable{
 	private String platforms;
 	private Double score;
 	private String imgUrl;
-	private String shortDescrition;
+	
+	@Column(columnDefinition = "TEXT")
+	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Game() {}
 
 	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
-			String shortDescrition, String longDescription) {
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
@@ -41,7 +45,7 @@ public class Game implements Serializable{
 		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDescrition = shortDescrition;
+		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
 
@@ -101,12 +105,12 @@ public class Game implements Serializable{
 		this.imgUrl = imgUrl;
 	}
 
-	public String getShortDescrition() {
-		return shortDescrition;
+	public String getShortDescription() {
+		return shortDescription;
 	}
 
-	public void setShortDescrition(String shortDescrition) {
-		this.shortDescrition = shortDescrition;
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
 	}
 
 	public String getLongDescription() {
@@ -137,7 +141,7 @@ public class Game implements Serializable{
 	@Override
 	public String toString() {
 		return "Game [id=" + id + ", title=" + title + ", year=" + year + ", genre=" + genre + ", platforms="
-				+ platforms + ", score=" + score + ", imgUrl=" + imgUrl + ", shortDescrition=" + shortDescrition
+				+ platforms + ", score=" + score + ", imgUrl=" + imgUrl + ", shortDescription=" + shortDescription
 				+ ", longDescription=" + longDescription + "]";
 	}
 	
