@@ -1,7 +1,9 @@
-package com.luizdev.dslist.entities;
+package com.luizdev.dslist.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
+
+import com.luizdev.dslist.entities.Game;
 
 public class GameMinDTO implements Serializable{
 	
