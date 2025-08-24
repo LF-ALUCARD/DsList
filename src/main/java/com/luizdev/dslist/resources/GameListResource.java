@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.luizdev.dslist.entities.GameList;
+import com.luizdev.dslist.dto.GameListDTO;
 import com.luizdev.dslist.service.GameListService;
 
 @RestController
-@RequestMapping(value = "/gameslist")
+@RequestMapping(value = "/lists")
 public class GameListResource {
 	
 	@Autowired
 	private GameListService gameListService;
 	
 	@GetMapping
-	public List<GameList> findAll(){
+	public List<GameListDTO> findAll(){
 		return gameListService.findAll();
 	}
 }
